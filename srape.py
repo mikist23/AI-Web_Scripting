@@ -2,6 +2,7 @@ import selenium.webdriver as webdriver
 from selenium.webdriver.chrome.service import Service
 import time
 
+
 def scrape_website(website):
     print("Launching chrome browser...")
 
