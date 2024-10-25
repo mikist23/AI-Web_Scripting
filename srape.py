@@ -58,3 +58,18 @@ def extract_body_content(html_content):
     return ""
 
 
+def clean_body_content(body_content):
+    soup = BeautifulSoup(body_content, "html.parser")
+
+    for script_or_style in soup(["script", "style"]):
+        script_or_style.extract()
+
+    # Get text or further process the content
+    cleaned_content = soup.get_text(separator="\n")
+    cleaned_content = "\n".join(
+        line.strip() for line in cleaned_content.splitlines() if line.strip()
+    )
+
+    return cleaned_content
+
+
