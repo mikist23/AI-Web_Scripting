@@ -25,7 +25,7 @@ from selenium.webdriver.chromium.remote_connection import ChromiumRemoteConnecti
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 import os
-
+# load drivers
 load_dotenv()
 
 SBR_WEBDRIVER = os.getenv("SBR_WEBDRIVER")
