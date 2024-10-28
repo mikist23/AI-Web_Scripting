@@ -49,7 +49,7 @@ def scrape_website(website):
         html = driver.page_source
         return html
 
-
+# extract_body_content
 def extract_body_content(html_content):
     soup = BeautifulSoup(html_content, "html.parser")
     body_content = soup.body
