@@ -57,7 +57,7 @@ def extract_body_content(html_content):
         return str(body_content)
     return ""
 
-
+# clean_body_content
 def clean_body_content(body_content):
     soup = BeautifulSoup(body_content, "html.parser")
 
